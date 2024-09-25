@@ -29,7 +29,6 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.6;
-    padding: var(--padding-small);
 }
 
 h1, h2, h3 {
@@ -80,7 +79,8 @@ a:hover {
     margin: 0;
     font-size: 3em;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: #ffffff; /* Изменен цвет текста */
     position: relative;
     z-index: 1;
 }
@@ -190,6 +190,12 @@ a:hover {
 .certificates img {
     width: 150px;
     margin: 20px;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.certificates img:hover, .clinics-logos img:hover {
+    transform: scale(3); /* Уменьшено увеличение до 1.05 */
+    cursor: pointer;
 }
 
 /* Стили для отзывов */
@@ -317,11 +323,18 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 20px; /* Добавляем промежуток между изображениями */
 }
 
 .clinics-logos img {
     width: 150px;
-    margin: 20px;
+    margin: 0; /* Убираем margin, так как flexbox управляет расстоянием через gap */
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.clinics-logos img:hover {
+    transform: scale(2.5); /* Легкое увеличение при наведении */
+    cursor: pointer;
 }
 
 /* Стили для футера */
