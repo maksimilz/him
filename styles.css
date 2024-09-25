@@ -16,7 +16,6 @@
     --font-weight-bold: 700;
 }
 
-/* Сброс стилей и общие настройки */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -53,7 +52,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Стили для заголовка */
 .header {
     background-image: url('img/bek.png');
     background-size: cover;
@@ -79,7 +77,7 @@ a:hover {
     font-size: 3em;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    color: #ffffff; /* Изменен цвет текста */
+    color: #ffffff;
     position: relative;
     z-index: 1;
 }
@@ -111,7 +109,6 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* Стили для секции УТП с градиентом */
 .usp {
     padding: var(--padding-base) var(--padding-small);
     text-align: center;
@@ -124,7 +121,7 @@ a:hover {
     font-size: var(--font-size-heading);
     margin-bottom: 20px;
     font-weight: var(--font-weight-bold);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Тень для заголовка */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     color: #333;
 }
 
@@ -134,7 +131,7 @@ a:hover {
     margin: 0 auto;
     color: #555;
 }
-/* Стили для секции интеграций */
+
 .integrations {
     padding: var(--padding-base) var(--padding-small);
     text-align: center;
@@ -148,22 +145,22 @@ a:hover {
 .clinics-logos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Выровнять по центру */
+    justify-content: center;
     align-items: center;
-    gap: 20px; /* Добавляем промежуток между изображениями */
+    gap: 20px;
 }
 
 .clinics-logos img {
     width: 150px;
-    margin: 0; /* Убираем margin, так как flexbox управляет расстоянием через gap */
+    margin: 0;
     transition: transform 0.3s ease, width 0.3s ease;
 }
 
 .clinics-logos img:hover {
-    transform: scale(2.5); /* Легкое увеличение при наведении */
+    transform: scale(2.5);
     cursor: pointer;
 }
-/* Стили для описания продукта с разделительными линиями */
+
 .product-description {
     display: flex;
     flex-wrap: wrap;
@@ -171,16 +168,16 @@ a:hover {
     padding: var(--padding-base) var(--padding-small);
     background-size: cover;
     background-position: center;
-    align-items: flex-start; /* Выровнять элементы по верху */
+    align-items: flex-start;
 }
 
 .product-description article {
-    flex: 1 1 300px; /* Одинаковая ширина колонок */
+    flex: 1 1 300px;
     margin: 20px;
     text-align: center;
     border-top: 3px solid var(--primary-color);
     padding-top: 20px;
-    max-width: 450px; /* Ограничиваем максимальную ширину */
+    max-width: 450px;
 }
 
 .product-description h2 {
@@ -194,20 +191,21 @@ a:hover {
     list-style-type: none;
     padding-left: 0;
 }
+
 .product-description li {
-    display: flex; /* Используем flex для выравнивания иконки и текста */
-    align-items: center; /* Выровнять иконку и текст по вертикали */
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
 }
+
 .product-description li::before {
-    content: '✔'; /* Используем символ галочки */
-    color: var(--primary-color); /* Цвет галочки */
-    font-size: 1.2em; /* Размер галочки */
-    margin-right: 10px; /* Отступ между галочкой и текстом */
-    flex-shrink: 0; /* Отключаем уменьшение иконки */
+    content: '✔';
+    color: var(--primary-color);
+    font-size: 1.2em;
+    margin-right: 10px;
+    flex-shrink: 0;
 }
 
-/* Стили для трастовых элементов */
 .trust-elements, .testimonials, .subscription-form, .integrations {
     background-color: var(--secondary-background-color);
     padding: var(--padding-base) var(--padding-small);
@@ -235,11 +233,10 @@ a:hover {
 }
 
 .certificates img:hover, .clinics-logos img:hover {
-    transform: scale(2.5); /* Легкое увеличение при наведении */
+    transform: scale(2.5);
     cursor: pointer;
 }
 
-/* Стили для отзывов */
 .testimonials {
     text-align: center;
     background-size: cover;
@@ -273,7 +270,6 @@ a:hover {
     top: -10px;
 }
 
-/* Стили для формы подписки */
 .subscription-form {
     text-align: center;
     background-size: cover;
@@ -325,7 +321,6 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* Стили для футера */
 .footer {
     background-color: var(--text-color);
     color: var(--text-color-light);
@@ -333,7 +328,6 @@ a:hover {
     text-align: center;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .product-description {
         flex-direction: column;
