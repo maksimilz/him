@@ -3,10 +3,18 @@
     --primary-color: #FFCC00;
     --primary-color-hover: #e6b800;
     --text-color: #333333;
+    --text-color-light: #ffffff;
     --background-color: #ffffff;
     --secondary-background-color: #f9f9f9;
     --font-family: 'Roboto', Arial, sans-serif;
     --heading-font-family: 'Roboto', Arial, sans-serif;
+    --border-color: #ccc;
+    --padding-base: 60px;
+    --padding-small: 20px;
+    --font-size-base: 1.2em;
+    --font-size-heading: 2em;
+    --font-size-small: 1em;
+    --font-weight-bold: 700;
 }
 
 /* Сброс стилей и общие настройки */
@@ -21,9 +29,23 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.6;
+    padding: var(--padding-small);
 }
 
-/* Стили для ссылок */
+h1, h2, h3 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: var(--font-size-heading);
+}
+
+p, li {
+    font-size: var(--font-size-base);
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -35,7 +57,7 @@ a:hover {
 
 /* Стили для заголовка */
 .header {
-    background-image: url('pet-background.jpg');
+    background-image: url('img/bek.png');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -58,7 +80,7 @@ a:hover {
     margin: 0;
     font-size: 3em;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1;
 }
@@ -75,7 +97,7 @@ a:hover {
     margin-top: 30px;
     padding: 15px 30px;
     background-color: var(--primary-color);
-    color: var(--text-color);
+    color: var(--text-color-light);
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
@@ -92,18 +114,20 @@ a:hover {
 
 /* Стили для секции УТП */
 .usp {
-    padding: 60px 20px;
+    padding: var(--padding-base) var(--padding-small);
     text-align: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .usp h2 {
-    font-size: 2em;
+    font-size: var(--font-size-heading);
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 .usp p {
-    font-size: 1.2em;
+    font-size: var(--font-size-base);
     max-width: 800px;
     margin: 0 auto;
 }
@@ -112,26 +136,30 @@ a:hover {
 .product-description {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 60px 20px;
-    background-color: var(--secondary-background-color);
+    justify-content: center;
+    padding: var(--padding-base) var(--padding-small);
+    background-size: cover;
+    background-position: center;
 }
 
 .product-description article {
     flex: 1 1 300px;
     margin: 20px;
+    text-align: center;
 }
 
 .product-description h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 .product-description ul {
     list-style-type: disc;
     padding-left: 20px;
-    font-size: 1em;
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
 }
 
 .product-description li {
@@ -140,14 +168,16 @@ a:hover {
 
 /* Стили для трастовых элементов */
 .trust-elements {
-    padding: 60px 20px;
+    padding: var(--padding-base) var(--padding-small);
     text-align: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .trust-elements h2 {
-    font-size: 2em;
+    font-size: var(--font-size-heading);
     margin-bottom: 30px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 .certificates {
@@ -160,24 +190,20 @@ a:hover {
 .certificates img {
     width: 150px;
     margin: 20px;
-    transition: transform 0.3s ease;
-}
-
-.certificates img:hover {
-    transform: scale(1.05);
 }
 
 /* Стили для отзывов */
 .testimonials {
-    padding: 60px 20px;
+    padding: var(--padding-base) var(--padding-small);
     text-align: center;
-    background-color: var(--secondary-background-color);
+    background-size: cover;
+    background-position: center;
 }
 
 .testimonials h2 {
-    font-size: 2em;
+    font-size: var(--font-size-heading);
     margin-bottom: 40px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 .testimonial-item {
@@ -194,6 +220,7 @@ a:hover {
 .testimonial-item blockquote {
     font-style: italic;
     margin-top: 20px;
+    padding-left: 40px;
     position: relative;
 }
 
@@ -202,24 +229,26 @@ a:hover {
     font-size: 50px;
     color: var(--primary-color);
     position: absolute;
-    left: -20px;
+    left: 0;
     top: -10px;
 }
 
 /* Стили для формы подписки */
 .subscription-form {
-    padding: 60px 20px;
+    padding: var(--padding-base) var(--padding-small);
     text-align: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .subscription-form h2 {
-    font-size: 2em;
+    font-size: var(--font-size-heading);
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 .subscription-form p {
-    font-size: 1.2em;
+    font-size: var(--font-size-base);
     margin-bottom: 30px;
 }
 
@@ -230,7 +259,7 @@ a:hover {
 }
 
 .subscription-form label {
-    font-size: 1em;
+    font-size: var(--font-size-small);
     margin-right: 10px;
     align-self: center;
 }
@@ -240,19 +269,19 @@ a:hover {
     width: 300px;
     max-width: 80%;
     margin-right: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
-    font-size: 1em;
+    font-size: var(--font-size-base);
 }
 
 .subscription-form button {
     padding: 16px 30px;
     background-color: var(--primary-color);
-    color: var(--text-color);
+    color: var(--text-color-light);
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: var(--font-size-base);
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 10px;
@@ -265,18 +294,20 @@ a:hover {
 
 /* Стили для интеграций */
 .integrations {
-    padding: 60px 20px;
+    padding: var(--padding-base) var(--padding-small);
     text-align: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .integrations h2 {
-    font-size: 2em;
+    font-size: var(--font-size-heading);
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 .integrations p {
-    font-size: 1.2em;
+    font-size: var(--font-size-base);
     max-width: 800px;
     margin: 0 auto 40px;
 }
@@ -291,18 +322,13 @@ a:hover {
 .clinics-logos img {
     width: 150px;
     margin: 20px;
-    transition: transform 0.3s ease;
-}
-
-.clinics-logos img:hover {
-    transform: scale(1.05);
 }
 
 /* Стили для футера */
 .footer {
     background-color: var(--text-color);
-    color: #fff;
-    padding: 20px;
+    color: var(--text-color-light);
+    padding: var(--padding-small);
     text-align: center;
 }
 
@@ -310,10 +336,7 @@ a:hover {
 @media (max-width: 768px) {
     .product-description {
         flex-direction: column;
-    }
-
-    .product-description article {
-        margin: 20px 0;
+        align-items: center;
     }
 
     .subscription-form form {
@@ -322,7 +345,6 @@ a:hover {
     }
 
     .subscription-form input[type="email"] {
-        margin-right: 0;
         margin-bottom: 10px;
     }
 
@@ -333,5 +355,8 @@ a:hover {
     .subheading {
         font-size: 1.2em;
     }
-}
 
+    .usp p, .integrations p {
+        font-size: var(--font-size-small);
+    }
+}
